@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#111827"><title>MotoDemerval</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+<header><div class="logo">🏍️</div><div><h1>MotoDemerval</h1><p>Solicite seu mototáxi</p></div></header>
+<section class="card">
+<label for="nome">Seu nome</label><input id="nome" type="text" placeholder="Digite seu nome">
+<div class="map-title"><div><strong>Local de embarque</strong><small>Toque no mapa ou use sua localização.</small></div>
+<button id="btnLocalizacao" class="secondary">📍 Minha localização</button></div>
+<div id="map"></div><p id="coordenadas" class="status">Nenhuma localização marcada.</p>
+<label for="destino">Destino / referência</label><input id="destino" type="text" placeholder="Ex.: Centro, próximo à praça">
+<label>Forma de pagamento</label>
+<div class="payments"><label><input type="radio" name="pagamento" value="Pix" checked> Pix</label>
+<label><input type="radio" name="pagamento" value="Dinheiro"> Dinheiro</label>
+<label><input type="radio" name="pagamento" value="Cartão"> Cartão</label></div>
+<label for="obs">Observação</label><textarea id="obs" rows="3" placeholder="Ex.: Estou de camisa azul"></textarea>
+<button id="btnSolicitar" class="primary">💬 Solicitar pelo WhatsApp</button>
+</section><p class="footer">MotoDemerval • Demerval Lobão</p>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="script.js"></script>
+</body></html>
