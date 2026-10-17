@@ -1,22 +1,123 @@
 # 🏍️ MotoDemerval
 
-App de solicitação de mototáxi em HTML, CSS, JavaScript e Capacitor.
+Aplicativo de solicitação de **mototáxi** desenvolvido para facilitar o contato entre clientes e o serviço de transporte.
 
-## Funções
-- Nome do cliente
-- Mapa para marcar o embarque
-- Botão Minha localização (GPS, mediante permissão)
-- Destino/referência
-- Pagamento: Pix, dinheiro ou cartão
-- Observação
-- Envio pelo WhatsApp para +55 86 99579-9484 com link do mapa
+O cliente pode informar seus dados, marcar sua localização diretamente no mapa, escolher a forma de pagamento e enviar a solicitação da corrida pelo WhatsApp.
 
-## Gerar APK sem Android SDK no computador
-Envie todos os arquivos ao GitHub, inclusive `.github`.
+---
 
-Abra **Actions → Build MotoDemerval APK → Run workflow**.
-Quando terminar com sucesso, baixe o artefato **MotoDemerval-APK**.
-Extraia o ZIP e instale `app-debug.apk`.
+## 📱 Sobre o projeto
 
-## Importante
-O mapa usa OpenStreetMap/Leaflet e precisa de internet. O GPS exige permissão de localização. O WhatsApp abre a mensagem pronta para o usuário confirmar o envio.
+O **MotoDemerval** foi desenvolvido utilizando tecnologias web e transformado em aplicativo Android através do **Capacitor**.
+
+A compilação do APK é realizada automaticamente pelo **GitHub Actions**, permitindo gerar o aplicativo Android sem precisar instalar o Android Studio ou Android SDK no computador.
+
+---
+
+## 🚀 Funcionalidades
+
+- 🏍️ Solicitação de mototáxi
+- 👤 Identificação do cliente
+- 🗺️ Mapa interativo
+- 📍 Marcação manual da localização
+- 📡 Localização atual através do GPS
+- 🎯 Campo para destino ou ponto de referência
+- 💳 Escolha da forma de pagamento
+- 💬 Envio da solicitação pelo WhatsApp
+- 📝 Campo para observações
+- 📱 Interface adaptada para celulares
+- 🌙 Interface moderna em tema escuro
+- 🤖 Compatível com Android
+
+---
+
+## 📍 Localização
+
+O cliente possui duas maneiras de informar onde está.
+
+### Usar GPS
+
+O botão:
+
+`📍 Minha localização`
+
+solicita autorização para acessar a localização do aparelho.
+
+Após a autorização, o aplicativo posiciona o marcador no mapa.
+
+### Marcar manualmente
+
+O cliente também pode tocar diretamente no mapa para escolher seu local de embarque.
+
+O marcador pode ser reposicionado caso seja necessário.
+
+---
+
+## 💳 Formas de pagamento
+
+O cliente pode escolher entre:
+
+- 💠 Pix
+- 💵 Dinheiro
+- 💳 Cartão
+
+A forma escolhida é adicionada automaticamente à solicitação da corrida.
+
+---
+
+## 💬 Solicitação pelo WhatsApp
+
+Depois de preencher os dados, o cliente toca no botão:
+
+`💬 Solicitar pelo WhatsApp`
+
+O aplicativo prepara automaticamente uma mensagem contendo as informações da corrida.
+
+Exemplo:
+
+```text
+🏍️ NOVA CORRIDA - MotoDemerval
+
+👤 Cliente: João
+
+📍 Localização:
+Link da localização no mapa
+
+🎯 Destino/Referência:
+Centro
+
+💳 Pagamento:
+Pix
+
+📝 Observação:
+
+🛠️ Tecnologias utilizadas
+O MotoDemerval utiliza:
+- HTML5
+- CSS3
+- JavaScript
+- Leaflet
+- OpenStreetMap
+- Capacitor
+- Android
+- GitHub
+- GitHub Actions
+- WhatsApp
+
+📂 Estrutura do projeto
+
+mototaxi/
+│
+├── .github/
+│   └── workflows/
+│       └── build-android.yml
+│
+├── www/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── capacitor.config.json
+├── package.json
+└── README.md
+
